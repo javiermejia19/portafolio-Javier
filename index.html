@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+        .imgp{       
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+        }
+        .imgp2{       
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-left: 100px;
+        }
+        .img2{       
+            width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 20px;
+        }
+        .img3{       
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Javi</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">HABILIDADES</a></li>
+                    <li><a href="#proyectos" onclick="seleccionar()">PROYECTOS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/Javier.jpg" alt="">
+            </div>
+            <h1>JAVIER MEJIA</h1>
+            <h2>Ingeniero en Informatica</h2>
+            
+        </div>
+        
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, soy Javier Mejia.</span>Soy una persona muy alegre y amigable me gusta mucho la informatica tambien el futbol mi equipo europeo favorito es el Real Madrid, tengo 20 años de edad un placer. </p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            12-08
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            3356-5874
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            mejiajavi446@gmail.com
+                        </li>
+                        <li>
+                            <strong>Website</strong>
+                            www.javi.com
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            Brisas del plan, San Manuel, Cortes
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>Ingenierio en Informatica</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        
+                        <div class="interes">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>DEPORTE</span>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Habilidades</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Habilidades tecnicas</h3>
+                    <div class="skill">
+                        <span>Javascript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Photoshop</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Excel</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Programacion</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>50%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Habilidades profesionales</h3>
+                    <div class="skill">
+                        <span>Comunicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en Equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creatividad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Puntualidad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PROYECTOS -->
+    <section id="proyectos" class="proyectos">
+        <div class="contenido-seccion">
+            <h2>Proyectos</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Proyectos</h3>
+                    <div class="item izq">
+                        <h4>Sistema de votacion</h4>
+                        <span class="casa">Visual Basic</span>
+                        <span class="fecha">2024</span>
+                        <p>Realice un sistema de votacion para mi colegio con Visual Basic el proyecto tiene 5 formularios, el principal con un mensaje de bienvenida, el segundo, donde se registran los presidentes y sus planillas, el tercero donde vota, el cuarto donde se ingresa mediante un login y el ultimo donde se muestra el resultado de las votaciones.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                        
+                    </div>
+                    
+                        <img class="imgp" src="img/bandicam 2024-10-03 11-19-58-928.jpg" alt="">
+                        <img class="imgp2" src="img/bandicam 2024-10-03 11-19-29-279.jpg" alt="">
+                    
+                    
+                    
+                </div>
+
+                <div class="col derecha">
+                    <h3>Proyectos</h3>
+                    <div class="item der">
+                        <h4>Pagina Web</h4>
+                        <span class="casa">HTML Y CSS</span>
+                        <span class="fecha">2024</span>
+                        <p>Realice una pagina web de mascotas donde se muestra una variedad de mascotas la pagina es responsiva quiere decir que se adapta tanto a ordenadores como a celulares.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <img class="img2" src="img/bandicam 2024-10-03 12-02-27-292.jpg" alt="">
+                    <img class="img3" src="img/bandicam 2024-10-03 12-02-22-840.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Primaria</h4>
+                        <span class="casa">Centro de Educaion Bascia No Gubernamental Jasama</span>
+                        <span class="fecha">2011 - 2015</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Secundaria</h4>
+                        <span class="casa">Centro de Educaion Bascia No Gubernamental Jasama</span>
+                        <span class="fecha">2016 - 2019</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Carrera</h4>
+                        <span class="casa">Centro de Educaion Bascia No Gubernamental Jasama</span>
+                        <span class="fecha">2021 - 2024</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>Practica</h4>
+                        <span class="casa">Banco del Pais</span>
+                        <span class="fecha">2024</span>
+                        <p>Realice mi practica profesional en el banco del pais, durante mi practica realice un gran numero de actividades que llevo a obtener un gran conocimiento.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img src="img/Javier4.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Ingeniero Informatico</h3>
+                        <p>Programas</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/Javier2.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Ingeniero Informatico</h3>
+                        <p>Programas</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/Javier3.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Ingeniero Informatico</h3>
+                        <p>Programas</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/Javier5.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Ingeniero Informatico</h3>
+                        <p>Programas</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/Javier6.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Ingeniero Informatico</h3>
+                        <p>Programas</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <input type="text" placeholder="Tú Nombre">
+                    <input type="text" placeholder="Número telefónico">
+                    <input type="text" placeholder="Dirección de correo">
+                    <input type="text" placeholder="Tema">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button>Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+                <!-- Mapa -->
+                <div class="col">
+                    <img src="img/bandicam 2024-10-02 17-46-36-534.jpg" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Honduras, San Manuel, Cortes
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Llamanos: 3356 - 3874
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: mejiajavi446@gmail..com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.facebook.com/profile.php?id=100051656882509&locale=es_LA"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/javier_.m12/"><i class="fa-brands fa-instagram"></i></a>
+            
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
