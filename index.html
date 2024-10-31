@@ -8,36 +8,253 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="estilos.css">
 
+    
+
+
     <style>
-        .imgp{       
+        .imgp {
     width: 300px;
     height: 300px;
-    border-radius: 5px;
+    border-radius: 15px; /* Bordes redondeados */
     overflow: hidden;
-        }
-        .imgp2{       
+    margin-top: 20px;
+    margin-left: auto;
+    border: 5px solid transparent; /* Borde para degradado */
+
+    /* Borde con degradado */
+    
+    /* Sombra para el efecto 3D */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    
+    /* Efecto de transformación al pasar el cursor */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imgp:hover {
+    /* Efecto de levantar la imagen */
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+}
+        .imgp2 {
     width: 300px;
     height: 300px;
-    border-radius: 5px;
+    border-radius: 15px; /* Bordes redondeados */
     overflow: hidden;
-    margin-top: 10px;
-    margin-left: 100px;
-        }
-        .img2{       
-            width: 300px;
-    height: 300px;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-left: 20px;
-        }
-        .img3{       
+    margin-top: 20px;
+    margin-left: auto;
+    border: 5px solid transparent; /* Borde para degradado */
+
+    
+    
+    /* Efecto de transformación al pasar el cursor */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imgp2:hover {
+    /* Efecto de levantar la imagen */
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.img2 {
     width: 300px;
     height: 300px;
-    border-radius: 5px;
+    border-radius: 15px; /* Bordes redondeados */
     overflow: hidden;
-    margin-top: 10px;
-    margin-left: 100px;
+    margin-top: 20px;
+    margin-left: auto;
+    border: 5px solid transparent; /* Borde para degradado */
+
+    
+
+    /* Sombra para el efecto 3D */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    
+    /* Efecto de transformación al pasar el cursor */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img2:hover {
+    /* Efecto de levantar la imagen */
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+}
+.img3 {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: auto;
+    border: 5px solid transparent; /* Borde para degradado */
+
+    
+
+    /* Sombra para el efecto 3D */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    
+    /* Efecto de transformación al pasar el cursor */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img3:hover {
+    /* Efecto de levantar la imagen */
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+      /* Estilos generales del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #252e2c;
+    border-radius: 15px;
+    padding: 30px;
+    width: 500px;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
+    text-align: left;
+}
+
+/* Encabezado del modal */
+.modal-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Botón de cierre */
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.cerrar:hover {
+    color: red;
+}
+
+/* Contenedor de objetivos en columnas */
+.objetivos-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 10px;
+}
+
+.objetivos-container p {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Galería */
+.proyecto {
+    cursor: pointer;
+    position: relative;
+}
+
+.proyecto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+}
+/* Estilo para organizar el contenido en columna */
+.container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Espacio entre los elementos */
+            max-width: 600px;
+            margin: 0 auto; /* Centrar el contenedor */
+            padding: 20px;
         }
+
+        /* Estilo para cada elemento */
+        .content-box {
+            padding: 20px;
+            background-color: #1e2326;
+            border: 1px solid #1e2326;
+            text-align: center;
+            font-size: 18px;
+        }
+        /* Estilo para organizar el contenido en columna */
+.container1 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Espacio entre los elementos */
+            max-width: 600px;
+            margin: 0 auto; /* Centrar el contenedor */
+            padding: 20px;
+        }
+
+        /* Estilo para cada elemento */
+        .content-box1 {
+            padding: 20px;
+            background-color: #1e2326;
+            border: 1px solid #1e2326;
+            text-align: center;
+            font-size: 18px;
+        }
+
+/* Animación para el modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skill p {
+    margin-bottom: 10px; /* Ajusta el valor según el espacio que necesites */
+}
+
+
+
+
     </style>
 </head>
 <body>
@@ -54,7 +271,7 @@
                     <li><a href="#skills" onclick="seleccionar()">HABILIDADES</a></li>
                     <li><a href="#proyectos" onclick="seleccionar()">PROYECTOS</a></li>
                     <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
-                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">OBJETIVOS</a></li>
                     <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
                 </ul>
             </nav>
@@ -71,7 +288,7 @@
                 <img src="img/Javier.jpg" alt="">
             </div>
             <h1>JAVIER MEJIA</h1>
-            <h2>Ingeniero en Informatica</h2>
+            <h2>BTPI</h2>
             
         </div>
         
@@ -109,8 +326,8 @@
                             Brisas del plan, San Manuel, Cortes
                         </li>
                         <li>
-                            <strong>Cargo</strong>
-                            <span>Ingenierio en Informatica</span>
+                            <strong>Carrera</strong>
+                            <span>Bachillerato Tecnico Profesional en Informatica</span>
                         </li>
                     </ul>
                 </div>
@@ -137,6 +354,22 @@
                             <span>DEPORTE</span>
                             
                         </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-code"></i>
+                            <span>PROGRAMACIÓN</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-code-branch"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-palette"></i>
+                            <span>PHOTOSHOP</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-network-wired"></i>
+                            <span>REDES</span>
+                        </div>
                         
                         
                         
@@ -158,14 +391,16 @@
                     <h3>Habilidades tecnicas</h3>
                     <div class="skill">
                         <span>Javascript</span>
+                        <p>Lenguaje de programación utilizado principalmente para desarrollo web, agregando interactividad y dinamismo a las páginas.</p>
                         <div class="barra-skill">
                             <div class="progreso">
-                                <span>80%</span>
+                                <span>30%</span>
                             </div>
                         </div>
                     </div>
                     <div class="skill">
                         <span>HTML & CSS</span>
+                        <p>Lenguajes de marcado y estilo para estructurar y diseñar páginas web de manera visualmente atractiva y funcional.</p>
                         <div class="barra-skill">
                             <div class="progreso">
                                 <span>90%</span>
@@ -174,25 +409,28 @@
                     </div>
                     <div class="skill">
                         <span>Photoshop</span>
+                        <p>Herramienta de edición de imágenes para crear y modificar gráficos, fotografías y contenido visual profesional.</p>
                         <div class="barra-skill">
                             <div class="progreso">
-                                <span>95%</span>
+                                <span>40%</span>
                             </div>
                         </div>
                     </div>
                     <div class="skill">
                         <span>Excel</span>
+                        <p>Software de hojas de cálculo utilizado para análisis de datos, gestión y visualización de información en tablas.</p>
                         <div class="barra-skill">
                             <div class="progreso">
-                                <span>85%</span>
+                                <span>50%</span>
                             </div>
                         </div>
                     </div>
                     <div class="skill">
                         <span>Programacion</span>
+                        <p>Habilidad para escribir código en diversos lenguajes, desarrollando software y aplicaciones que resuelven problemas.</p>
                         <div class="barra-skill">
                             <div class="progreso">
-                                <span>50%</span>
+                                <span>55%</span>
                             </div>
                         </div>
                     </div>
@@ -204,22 +442,25 @@
                     <h3>Habilidades profesionales</h3>
                     <div class="skill">
                         <span>Comunicación</span>
+                        <p>Tengo la capacidad para expresar ideas y escuchar a los demás de manera clara y efectiva, facilitando el entendimiento mutuo.</p>
                         <div class="barra-skill">
                             <div class="progreso">
-                                <span>80%</span>
+                                <span>100%</span>
                             </div>
                         </div>
                     </div>
                     <div class="skill">
                         <span>Trabajo en Equipo</span>
+                        <p>Tengo la habilidad para colaborar con otros, contribuyendo al logro de objetivos comunes de manera armoniosa y eficiente.</p>
                         <div class="barra-skill">
                             <div class="progreso">
-                                <span>70%</span>
+                                <span>100%</span>
                             </div>
                         </div>
                     </div>
                     <div class="skill">
                         <span>Creatividad</span>
+                        <p>Cuento con la capacidad para generar ideas innovadoras y soluciones originales ante problemas o desafíos.</p>
                         <div class="barra-skill">
                             <div class="progreso">
                                 <span>100%</span>
@@ -228,23 +469,25 @@
                     </div>
                     <div class="skill">
                         <span>Puntualidad</span>
+                        <p>Puedo cumplir con horarios y plazos establecidos, mostrando responsabilidad y respeto por el tiempo de los demás.</p>
                         <div class="barra-skill">
                             <div class="progreso">
-                                <span>60%</span>
+                                <span>100%</span>
                             </div>
                         </div>
                     </div>
                     <div class="skill">
                         <span>Dedicación</span>
+                        <p>Soy una persona que se compromete y esfueza constante para alcanzar metas, mostrando perseverancia y enfoque en el trabajo.</p>
                         <div class="barra-skill">
                             <div class="progreso">
-                                <span>90%</span>
+                                <span>100%</span>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
-            </div>
+                
+
         </div>
     </section>
 
@@ -253,40 +496,65 @@
         <div class="contenido-seccion">
             <h2>Proyectos</h2>
             <div class="fila">
-                <div class="col izquierda">
-                    <h3>Proyectos</h3>
-                    <div class="item izq">
-                        <h4>Sistema de votacion</h4>
-                        <span class="casa">Visual Basic</span>
-                        <span class="fecha">2024</span>
-                        <p>Realice un sistema de votacion para mi colegio con Visual Basic el proyecto tiene 5 formularios, el principal con un mensaje de bienvenida, el segundo, donde se registran los presidentes y sus planillas, el tercero donde vota, el cuarto donde se ingresa mediante un login y el ultimo donde se muestra el resultado de las votaciones.</p>
-                        <div class="conectori">
-                            <div class="circuloi"></div>
+               <div class="container1">
+                    <div class="content-box"><h3>Proyecto #1</h3>
+                        <div class="item izq">
+                            <h4>Sistema de votacion</h4>
+                            <span class="casa">VISUAL BASIC 2019</span>
+                            <span class="fecha">2024</span>
+                            <p>Realice un sistema de votacion para mi colegio con Visual Basic el proyecto tiene 5 formularios, el principal con un mensaje de bienvenida, el segundo, donde se registran los presidentes y sus planillas, el tercero donde vota, el cuarto donde se ingresa mediante un login y el ultimo donde se muestra el resultado de las votaciones.</p>
+                            <div class="conectori">
+                                <div class="circuloi"></div>
+                            </div>
+                        </div>
+                        <img class="img2" src="img/bandicam 2024-10-03 11-19-58-928.jpg" alt="">
+                        <img class="img3" src="img/bandicam 2024-10-03 11-19-29-279.jpg" alt=""></div>
+                    <div class="content-box1"><h3>Proyecto #3</h3>
+                        <div class="item izq">
+                            <h4>Pagina Web</h4>
+                            <span class="casa">HTML Y CSS</span>
+                            <span class="fecha">2024</span>
+                            <p>Realice una pagina web de cristiano ronaldo donde sale una tabla con todos sus datos como jugar esto lo realice con un curso de SERGICODE donde me enseño a utilizar html y csss.</p>
+                            <div class="conectori">
+                                <div class="circuloi"></div>
+                            </div>
+                            
                         </div>
                         
-                    </div>
-                    
-                        <img class="imgp" src="img/bandicam 2024-10-03 11-19-58-928.jpg" alt="">
-                        <img class="imgp2" src="img/bandicam 2024-10-03 11-19-29-279.jpg" alt="">
-                    
-                    
-                    
+                            <img class="imgp" src="img/bandicam 2024-10-24 20-09-17-211.jpg" alt="">
+                            <img class="imgp2" src="img/bandicam 2024-10-24 20-09-21-688.jpg" alt=""></div>
                 </div>
-
-                <div class="col derecha">
-                    <h3>Proyectos</h3>
-                    <div class="item der">
-                        <h4>Pagina Web</h4>
-                        <span class="casa">HTML Y CSS</span>
-                        <span class="fecha">2024</span>
-                        <p>Realice una pagina web de mascotas donde se muestra una variedad de mascotas la pagina es responsiva quiere decir que se adapta tanto a ordenadores como a celulares.</p>
-                        <div class="conectord">
-                            <div class="circulod"></div>
+                <div class="container">
+                    <div class="content-box"><h3>Proyecto #2</h3>
+                        <div class="item der">
+                            <h4>Pagina Web</h4>
+                            <span class="casa">HTML Y CSS</span>
+                            <span class="fecha">2024</span>
+                            <p>Realice una pagina web de mascotas donde se muestra una variedad de mascotas la pagina es responsiva quiere decir que se adapta tanto a ordenadores como a celulares.</p>
+                            <div class="conectord">
+                                <div class="circulod"></div>
+                            </div>
                         </div>
-                    </div>
-                    <img class="img2" src="img/bandicam 2024-10-03 12-02-27-292.jpg" alt="">
-                    <img class="img3" src="img/bandicam 2024-10-03 12-02-22-840.jpg" alt="">
+                        <img class="img2" src="img/bandicam 2024-10-03 12-02-27-292.jpg" alt="">
+                        <img class="img3" src="img/bandicam 2024-10-03 12-02-22-840.jpg" alt=""></div>
+                    <div class="content-box"><h3>Proyecto #4</h3>
+                        <div class="item der">
+                            <h4>Pagina Web</h4>
+                            <span class="casa">HTML Y CSS</span>
+                            <span class="fecha">2024</span>
+                            <p>Realice una pagina web de cristiano ronaldo donde sale una tabla con todos sus datos como jugar esto lo realice con un curso de SERGICODE donde me enseño a utilizar html y csss.</p>
+                            <div class="conectord">
+                                <div class="circulod"></div>
+                            </div>
+                            
+                        </div>
+                        
+                            <img class="imgp" src="img/bandicam 2024-10-24 20-07-54-826.jpg" alt="">
+                            <img class="imgp2" src="img/bandicam 2024-10-24 20-08-05-011.jpg" alt=""></div>
                 </div>
+                
+
+                
             </div>
         </div>
     </section>
@@ -347,47 +615,57 @@
     <!-- SECCION PORTFOLIO -->
     <section id="portfolio" class="portfolio">
         <div class="contenido-seccion">
-            <h2>PORTFOLIO</h2>
+            <h2>Objetivos</h2>
             <div class="galeria">
-                <div class="proyecto">
-                    <img src="img/Javier4.jpg" alt="">
+                <div class="proyecto" onclick="mostrarModal(['1. Mantener un equilibrio entre vida personal y laboral', 
+                '2. Desarrollar habilidades de gestión del tiempo',
+                '3. Fomentar el bienestar físico y mental',
+                '4. Ahorrar e invertir',
+                '5. Ampliar la red social y profesional', 
+                '6. Adquirir nuevas experiencias culturales', 
+                '7. Desarrollar habilidades de comunicación y liderazgo', 
+                '8. Aprender nuevas habilidades personales', 
+                '9. Cultivar un hobby o interés personal',
+                '10. Planificación a largo plazo'])">
+                    <img src="img/201711171441530.fbfoto.webp" alt="">
                     <div class="overlay">
-                        <h3>Ingeniero Informatico</h3>
-                        <p>Programas</p>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <img src="img/Javier2.jpg" alt="">
-                    <div class="overlay">
-                        <h3>Ingeniero Informatico</h3>
-                        <p>Programas</p>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <img src="img/Javier3.jpg" alt="">
-                    <div class="overlay">
-                        <h3>Ingeniero Informatico</h3>
-                        <p>Programas</p>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <img src="img/Javier5.jpg" alt="">
-                    <div class="overlay">
-                        <h3>Ingeniero Informatico</h3>
-                        <p>Programas</p>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <img src="img/Javier6.jpg" alt="">
-                    <div class="overlay">
-                        <h3>Ingeniero Informatico</h3>
-                        <p>Programas</p>
+                        <h3>Objetivos personales</h3>
+                        <p>OP</p>
                     </div>
                 </div>
                 
+                <div class="proyecto" onclick="mostrarModal(['1. Conseguir un primer empleo en su campo de estudio',
+                '2. Mejorar habilidades técnica',
+                '3. Obtener certificaciones profesionales',
+                '4. Desarrollar una red profesional sólida',
+                '5. Aprender un nuevo idioma',
+                '6. Perfeccionar las habilidades de trabajo en equipo',
+                '7. Emprender un proyecto propio',
+                '8. Mejorar las habilidades de comunicación profesional',
+                '9. Buscar mentoría',
+                '10. Subir de nivel en la organización'])">
+                    <img src="img/ejemplos-de-objetivos-profesionales-1024x576.webp" alt="">
+                    <div class="overlay">
+                        <h3>Objetivos profesionales</h3>
+                        <p>OP</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <h2 class="modal-header">Objetivos</h2>
+            <div id="objetivos-container" class="objetivos-container"></div>
+        </div>
+    </div>
+    
+    
+   
+    
 
     <!-- SECCION CONTACTO -->
     <section id="contacto" class="contacto">
@@ -395,36 +673,54 @@
             <h2>CONTACTO</h2>
             <div class="fila">
                 <!-- Formulario -->
-                <div class="col">
-                    <input type="text" placeholder="Tú Nombre">
-                    <input type="text" placeholder="Número telefónico">
-                    <input type="text" placeholder="Dirección de correo">
-                    <input type="text" placeholder="Tema">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <button>Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
-                        <span class="overlay"></span>
-                    </button>
+                <div id="contacto" class="col">
+                    <form id="formContacto">
+                        <input type="text" name="nombre" placeholder="Tú Nombre" required>
+                        <input type="text" name="telefono" placeholder="Número telefónico" required>
+                        <input type="email" name="correo" placeholder="Dirección de correo" required>
+                        <input type="text" name="tema" placeholder="Tema" required>
+                        <textarea name="mensaje" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+                        <button type="submit">Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
+                            <span class="overlay"></span>
+                        </button>
+                    </form>
                 </div>
+                
+                <script>
+                document.getElementById('formContacto').addEventListener('submit', function(event) {
+                    event.preventDefault();  // Evitar el comportamiento predeterminado de envío del formulario
+                
+                    // Obtener los datos del formulario
+                    const formData = new FormData(this);
+                
+                    // Enviar el formulario usando fetch
+                    fetch('procesar_contacto.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.text())  // Procesar la respuesta del servidor (puede ser json, text, etc.)
+                    .then(data => {
+                        // Mostrar la ventana emergente de éxito
+                        alert("¡Mensaje enviado con éxito!");
+                
+                        // Mantener la página en la misma sección
+                        window.location.hash = '#contacto';
+                    })
+                    .catch(error => {
+                        // En caso de error, mostrar un mensaje en la consola o a la vista
+                        console.error('Error al enviar el formulario:', error);
+                    });
+                });
+                </script>
+                
+                
+                
+            </div>
+        </div>
+    </section>
+    
                 <!-- Mapa -->
-                <div class="col">
-                    <img src="img/bandicam 2024-10-02 17-46-36-534.jpg" alt="">
-                    <div class="info">
-                        <ul>
-                            <li>
-                                <i class="fa-solid fa-location-dot"></i>
-                                Honduras, San Manuel, Cortes
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-mobile-screen"></i>
-                                Llamanos: 3356 - 3874
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-envelope"></i>
-                                Email: mejiajavi446@gmail..com
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>

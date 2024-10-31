@@ -39,3 +39,32 @@ function efectoHabilidades(){
 window.onscroll = function(){
     efectoHabilidades();
 } 
+
+function mostrarModal(objetivos) {
+    const modal = document.getElementById("modal");
+    const container = document.getElementById("objetivos-container");
+    container.innerHTML = ''; // Limpiar contenido anterior
+
+    // Crear elementos para cada objetivo y agregarlos al contenedor
+    objetivos.forEach(objetivo => {
+        const objetivoElement = document.createElement("p");
+        objetivoElement.textContent = objetivo;
+        container.appendChild(objetivoElement);
+    });
+
+    modal.style.display = "flex"; // Mostrar el modal
+}
+
+function cerrarModal() {
+    document.getElementById("modal").style.display = "none"; // Ocultar el modal
+}
+
+// Cerrar el modal al hacer clic fuera del contenido
+window.onclick = function (event) {
+    const modal = document.getElementById("modal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
+
+
